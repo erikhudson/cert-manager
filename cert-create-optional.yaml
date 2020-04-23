@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+ metadata:
+  name: institutovitalicia-lets
+spec:
+  secretName: 
+  duration: 24h
+  renewBefore: 12h
+  commonName: nginx.institutovitalicia.com.br
+  dnsNames:
+  - nginx.institutovitalicia.com.br
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
